@@ -1,0 +1,20 @@
+[submodule "qemu"]
+	path = qemu
+	url = https://github.com/coconut-svsm/qemu
+[submodule "svsm"]
+	path = svsm
+	url = https://github.com/stefano-garzarella/svsm.git
+[submodule "edk2"]
+	path = edk2
+	url = https://github.com/stefano-garzarella/edk2.git
+[submodule "sev-snp-measure"]
+	path = sev-snp-measure
+	url = https://github.com/virtee/sev-snp-measure.git
+[submodule "kbs/reference-kbs"]
+	path = kbs/reference-kbs
+	url = https://github.com/stefano-garzarella/reference-kbs.git
+	branch = svsm
+[submodule "kbs/kbc"]
+	path = kbs/kbc
+	url = https://github.com/stefano-garzarella/reference-kbc.git
+	branch = multiple-servers
