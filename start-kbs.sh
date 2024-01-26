@@ -26,7 +26,7 @@ done
 set -x
 
 pushd "${SCRIPT_PATH}/kbs/kbc"
-cargo run --example=svsm-proxy -- --unix "${PROXY_SOCK}"  --url "${KBS_URL}" -f
+RUST_LOG=info cargo run --example=svsm-proxy -- --unix "${PROXY_SOCK}"  --url "${KBS_URL}" -f
 popd
 
 kill "$(jobs -p)"
