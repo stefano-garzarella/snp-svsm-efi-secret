@@ -1,11 +1,12 @@
-# AMD SEV-SNP demo with SVSM, KBS, and Linux's efi_secrets
+# AMD SEV-SNP PoC with SVSM, KBS proxy, and Linux's efi_secrets
 
-This demo will allow you to start a Confidential VM on AMD SEV-SNP.
+This PoC will allow you to start a Confidential VM on AMD SEV-SNP.
 
 We will create an encrypted rootfs and boot a VM using QEMU and SVSM in VMPL0.
-SVSM will request an attestation report and talk to a Key Broker Server to
-perform a remote attestation and receive the rootfs encryption key previously
-registered with the expected launch measurement.
+SVSM will request an attestation report and talk to a Key Broker Server (using
+a proxy running in the host) to perform a remote attestation and receive the
+rootfs encryption key previously registered with the expected launch
+measurement.
 
 At this point SVSM injects this secret into the guest OS leveraging the
 EFI configuration table under the `LINUX_EFI_COCO_SECRET_AREA_GUID` entry
@@ -82,9 +83,10 @@ for the encryption key coming from SVSM.
 
 ### Start Key Broker server and SVSM proxy
 
-This script starts the Key Broker server and the proxy used by SVSM to
-communicate with the server. The proxy forwards requests arriving from SVSM
-via a serial port to the http connection with the server.
+This script starts in the host the Key Broker server (it will be remote in a
+real scenaio) and the proxy used by SVSM to communicate with the server.
+The proxy forwards requests arriving from SVSM via a serial port to the http
+connection with the server.
 
 ```shell
 ./start-kbs.sh
