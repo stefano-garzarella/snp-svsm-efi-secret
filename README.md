@@ -59,6 +59,8 @@ sudo dnf install rust cargo
 
 ## Demo
 
+[![Video demo](https://img.youtube.com/vi/STcKbgSOwo0/maxresdefault.jpg)](https://www.youtube.com/watch?v=STcKbgSOwo0)
+
 ### Build QEMU, EDK2, and SVSM
 
 This operation is only required the first time, or when git submodules are updated
