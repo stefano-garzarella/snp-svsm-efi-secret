@@ -105,5 +105,5 @@ And finally we launch our CVM which will receive the key from the Key Broker
 server and mount the rootfs by decrypting it.
 
 ```shell
-./start-vm.sh
+sudo ./start-cvm.sh
 ```

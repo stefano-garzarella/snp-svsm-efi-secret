@@ -9,7 +9,7 @@ function usage
 {
     echo -e "usage: $0 [OPTION...]"
     echo -e ""
-    echo -e "Build a VM image with rootfs encrypted"
+    echo -e "Register launch measurement and the encryption key in KBS"
     echo -e ""
     echo -e " -p, --passphrase    LUKS passphrase [default: ${LUKS_PASSPHRASE}]"
     echo -e " -h, --help          print this help"

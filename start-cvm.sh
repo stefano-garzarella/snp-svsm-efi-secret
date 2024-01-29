@@ -9,7 +9,7 @@ function usage
 {
     echo -e "usage: $0 [OPTION...]"
     echo -e ""
-    echo -e "Start QEMU VM"
+    echo -e "Start QEMU Confidential VM"
     echo -e ""
     echo -e " -h, --help          print this help"
 }
