@@ -55,7 +55,7 @@ projects, so I recommend that you install the following packages
 ```
 sudo dnf builddep https://src.fedoraproject.org/rpms/qemu/raw/f39/f/qemu.spec
 sudo dnf builddep https://src.fedoraproject.org/rpms/edk2/raw/f39/f/edk2.spec
-sudo dnf install rust cargo
+sudo dnf install cargo rust rust-std-static-x86_64-unknown-none
 ```
 
 ## Demo
